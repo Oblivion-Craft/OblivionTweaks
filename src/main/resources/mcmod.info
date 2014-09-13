@@ -1,0 +1,16 @@
+[
+{
+  "modid": "OblivionTweaks",
+  "name": "Oblivion Modpack Tweaks",
+  "description": "Tweaks for the Oblivion Modpack =P",
+  "version": "1.7.10",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ViolentNinjaD"],
+  "credits": "No thanks to Ikenna :D /jk",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
