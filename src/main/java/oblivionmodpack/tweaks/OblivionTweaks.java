@@ -14,12 +14,13 @@ import oblivionmodpack.tweaks.utility.LogHelper;
   Licensed under LGPL V3
 
 */
-@Mod(modid = OblivionTweaks.MOD_ID, name = OblivionTweaks.MOD_NAME, version = OblivionTweaks.MOD_VERSION)
+@Mod(modid = OblivionTweaks.MOD_ID, name = OblivionTweaks.MOD_NAME, version = OblivionTweaks.MOD_VERSION, dependencies = OblivionTweaks.MOD_DEPENDENCIES)
 public class OblivionTweaks 
 {
     public static final String MOD_ID = "OblivionTweaks";
     public static final String MOD_NAME = "Oblivion Tweaks";
     public static final String MOD_VERSION = "1.7.10";
+    public static final String MOD_DEPENDENCIES = "after:IC2;" + "after:CoFHCore;";
 
     @Mod.Instance
     public static OblivionTweaks instance;
