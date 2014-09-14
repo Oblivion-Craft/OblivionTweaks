@@ -9,6 +9,7 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
+
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
@@ -26,6 +27,22 @@ minecraft {
     assetDir = "eclipse/assets"
 }
 
+configurations {
+    apis
+    compile.extendsFrom apis
+}
+
+repositories {
+    maven {
+        name = "ic2"
+        url = "http://maven.ic2.player.to/"
+    }
+    maven {
+        name = "bdew"
+        url = "http://jenkins.bdew.net/maven"
+    }
+}
+
 dependencies {
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
@@ -40,6 +57,9 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+    apis 'net.industrial-craft:industrialcraft-2:2.2.575-experimental:api'
+    //I used Bdew's Forestry All-Power code to help me set this up
+    apis "net.bdew.thirdparty:CoFHLib:R1.0.1:api"
 }
 
 processResources

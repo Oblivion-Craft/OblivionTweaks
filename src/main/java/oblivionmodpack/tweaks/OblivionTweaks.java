@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import oblivionmodpack.tweaks.init.OblivionTweaksItems;
+import oblivionmodpack.tweaks.net.PacketHandler;
 import oblivionmodpack.tweaks.proxy.IProxy;
 import oblivionmodpack.tweaks.utility.LogHelper;
 
@@ -32,18 +33,32 @@ public class OblivionTweaks
     public void preInit(FMLPreInitializationEvent event)
     {
         LogHelper.info("Pre-init has begun!");
+
+        LogHelper.info("Registering Items!");
         OblivionTweaksItems.init();
+
+        LogHelper.info("Registering the Packet Handler!");
+        PacketHandler.init();
+
+        LogHelper.info("Oblivion Tweaks has finished Pre Initializing!");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
         LogHelper.info("Init has begun!");
+
+        LogHelper.info("Registering Tile Entities!");
+        proxy.registerTileEntities();
+
+        LogHelper.info("Oblivion Tweaks has finished Initializing!");
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
         LogHelper.info("Post-init has begun!");
+
+        LogHelper.info("Oblivion Tweaks has finished Post Initializing!");
     }
 }

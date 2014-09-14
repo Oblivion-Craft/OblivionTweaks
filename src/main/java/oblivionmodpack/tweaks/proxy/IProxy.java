@@ -7,4 +7,5 @@ package oblivionmodpack.tweaks.proxy;
 
 public interface IProxy 
 {
+    public abstract void registerTileEntities();
 }

@@ -6,4 +6,8 @@ package oblivionmodpack.tweaks.proxy;
 */
 public abstract class CommonProxy implements IProxy
 {
+    public void registerTileEntities()
+    {
+
+    }
 }
